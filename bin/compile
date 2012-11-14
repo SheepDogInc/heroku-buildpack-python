@@ -242,11 +242,11 @@ GETTEXT_VENDOR="vendor/gettext"
 
 mkdir -p $1/$GETTEXT_VENDOR
 tar -xz -C $1/$GETTEXT_VENDOR -f $GETTEXT_SOURCE
-$PATH='$GETTEXT_VENDOR/bin:$PATH'
+$PATH="$GETTEXT_VENDOR/bin:$PATH"
 
 # Set context environment variables.
 
-set-env PATH '$HOME/.heroku/venv/bin:$PATH'
+set-env PATH "$HOME/.heroku/venv/bin:$PATH"
 set-default-env PYTHONUNBUFFERED true
 set-default-env LIBRARY_PATH /app/.heroku/vendor/lib
 set-default-env LD_LIBRARY_PATH /app/.heroku/vendor/lib
