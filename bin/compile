@@ -236,6 +236,14 @@ for dir in $CACHED_DIRS; do
   cp -R $dir $CACHE_DIR/
 done
 
+# Gettext stuff
+GETTEXT_SOURCE="$BIN_DIR/../gettext.tgz"
+GETTEXT_VENDOR="vendor/gettext"
+
+mkdir -p $1/$GETTEXT_VENDOR
+tar -xz -C $1/$GETTEXT_VENDOR -f $GETTEXT_SOURCE
+$PATH='$GETTEXT_VENDOR/bin:$PATH'
+
 # Set context environment variables.
 
 set-env PATH '$HOME/.heroku/venv/bin:$PATH'
