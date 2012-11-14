@@ -245,7 +245,7 @@ tar -xz -C $1/$GETTEXT_VENDOR -f $GETTEXT_SOURCE
 
 # Set context environment variables.
 
-set-env PATH "$HOME/.heroku/venv/bin:$PATH"
+set-env PATH "/app/vendor/gettext/bin:$HOME/.heroku/venv/bin:$PATH"
 set-default-env PYTHONUNBUFFERED true
 set-default-env LIBRARY_PATH /app/.heroku/vendor/lib
 set-default-env LD_LIBRARY_PATH /app/.heroku/vendor/lib
