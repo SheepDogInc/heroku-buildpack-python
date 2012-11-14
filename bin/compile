@@ -242,7 +242,6 @@ GETTEXT_VENDOR="vendor/gettext"
 
 mkdir -p $1/$GETTEXT_VENDOR
 tar -xz -C $1/$GETTEXT_VENDOR -f $GETTEXT_SOURCE
-$PATH="$GETTEXT_VENDOR/bin:$PATH"
 
 # Set context environment variables.
 
